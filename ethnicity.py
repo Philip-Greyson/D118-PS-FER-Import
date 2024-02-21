@@ -1,9 +1,14 @@
-# Tiny script to take a student's race data and change it
-# into the format needed for import into the IL.FER field
-# Puts the output file on our SFTP server for autocomm into PS
+"""Script to take student race data and output format needed for IL.FER field to a file for import into PowerSchool.
 
-# SQL query from Richard Moeller, all credit to him
-# https://groups.io/g/psug-il/message/1483
+https://github.com/Philip-Greyson/D118-PS-FER-Import
+
+
+SQL query from Richard Moeller, all credit to him: https://groups.io/g/psug-il/message/1483
+Outputs the result of the SQL to a file and uploads it to our local SFTP server for import into PowerSchool.
+
+needs oracledb: pip install oracledb --upgrade
+needs pysftp: pip install pysftp --upgrade
+"""
 
 # importing module
 import datetime  # used to get current date for course info
